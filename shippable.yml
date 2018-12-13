@@ -13,10 +13,10 @@ jdk:
 
 build:
 
-  pre_ci_boot:
-    image_name: drydock/c7javall
-    image_tag: master
-    pull: true
+ # pre_ci_boot:
+  #  image_name: drydock/c7javall
+  #  image_tag: master
+  #  pull: true
     
   ci:
     - java -version
