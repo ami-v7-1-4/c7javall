@@ -10,11 +10,7 @@ jdk:
   - openjdk11
   - oraclejdk8
   - oraclejdk11
-
-matrix:
-  allow_failures:
-    - jdk: openjdk7
-      
+     
 build:
 
  # pre_ci_boot:
