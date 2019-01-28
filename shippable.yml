@@ -22,11 +22,12 @@ build:
     - java -version
     - echo $SHIPPABLE_JDK_VERSION
     - mvn --version    #3.6.0
+    - if [ "$SHIPPABLE_JDK_VERSION" == "openjdk7" ] || [ "$SHIPPABLE_JDK_VERSION" == "oraclejdk7" ]; then sdk use ant 1.10.1; sdk use gradle 5.1; fi
     - ant -version #1.9.13
     - gradle --version #5.1
     - MY_JDK_SET="$(source shipctl jdk set oraclejdk11)"
     - docker pull shippabledocker/sample_node_pvt:ecr
-    
+
 integrations:
     
   hub:
